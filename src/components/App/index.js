@@ -1,21 +1,18 @@
-import React from 'react';
-import Form from "../InputForm";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React from "react";
+
 import NavBar from "../NavBar/index";
-import InputForm from '../InputForm/index';
-import {Card,} from 'react-bootstrap';
+import InputForm from "../InputForm/index";
+
 // import "./App.css";
-
-
 
 function App() {
   return (
     <div>
-      <NavBar/>
-      <InputForm/>
+      <NavBar />
+      <InputForm />
       <p></p>
-     
-    {/* <Router>
+
+      {/* <Router>
     <Switch>
     <Route path="/Form">
     <InputForm/>

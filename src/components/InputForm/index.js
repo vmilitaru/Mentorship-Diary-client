@@ -26,23 +26,37 @@ function InputForm() {
   }
 
   function handleClick() {
+    // POST request using fetch inside useEffect React hook
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(q1),
+    };
+    fetch(`http://localhost:3000`, requestOptions)
+      .then((response) => response.json())
+      .then((data) => setq1(data.q1));
     console.log(q1);
-    console.log(q2);
-    console.log(q3);
-    console.log(q4);
-    console.log(q5);
+    // empty dependency array means this effect will only run once (like componentDidMount in classes)
+
+    //   console.log(q1);
+    //   console.log(q2);
+    //   console.log(q3);
+    //   console.log(q4);
+    //   console.log(q5);
+    //
   }
-  useEffect(() => {
-    async function addData() {
-      const response = await fetch(`http://localhost:3000`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(q1),
-      });
-      const data = await response.json();
-      console.log(data);
-    }
-  }, []);
+  // useEffect(() => {
+  //   async function addData() {
+  //     const response = await fetch(`http://localhost:3000`, {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(q1),
+  //     });
+  //     const data = await response.json();
+  //     console.log(data);
+  //   }
+  //   addData();
+  // }, []);
 
   // useEffect(() => {
   //   async function getQ1() {
