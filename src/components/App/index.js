@@ -1,19 +1,14 @@
+import Form from "../Form";
 import "./App.css";
+
+import NavBar from '../Nav bar/index'
+import InputForm from '../Form/index';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Happy Project Week</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          React Docs R Here
-        </a>
-      </header>
+      <NavBar/>
+      <InputForm/>
     </div>
   );
 }
