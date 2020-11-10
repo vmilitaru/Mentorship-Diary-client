@@ -25,10 +25,12 @@ function InputForm() {
     setq5(e.target.value);
   }
 
-  function handleClick() {
+  function handleClick(e) {
+    e.preventDefault();
     // POST request using fetch inside useEffect React hook
     const requestOptions = {
       method: "POST",
+      mode: 'no-cors',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(q1),
     };
