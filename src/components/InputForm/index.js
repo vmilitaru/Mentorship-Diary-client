@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import NavBar from "../NavBar";
 import { Form, Button } from "react-bootstrap";
 
@@ -32,6 +32,27 @@ function InputForm() {
     console.log(q4);
     console.log(q5);
   }
+  useEffect(() => {
+    async function addData() {
+      const response = await fetch(`http://localhost:3000`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(q1),
+      });
+      const data = await response.json();
+      console.log(data);
+    }
+  }, []);
+
+  // useEffect(() => {
+  //   async function getQ1() {
+  //     const res = await fetch("http://localhost:3000");
+  //     const data = await res.json();
+  //     console.log(data.payload);
+  //     q1(data.payload);
+  //   }
+  //   getQ1();
+  // }, []);
 
   return (
     //function for onChange
