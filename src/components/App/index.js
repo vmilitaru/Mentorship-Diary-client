@@ -1,6 +1,6 @@
 import React from 'react';
 import Form from "../Form";
-import NavBar from '../Nav bar/index'
+import NavBar from "../NavBar/index";
 import InputForm from '../Form/index';
 import {Card, CardBody} from 'react-bootstrap';
 // import "./App.css";
@@ -9,16 +9,10 @@ import {Card, CardBody} from 'react-bootstrap';
 
 function App() {
   return (
-
-    //image
-    //nav bar
-    //p tag 
     <div className="App">
- <Card border="dark" style={{ width: '18rem' }}> 
- <Card.Body> 
-     Hello, World!
-     </Card.Body>
- </Card>
+    <NavBar/> 
+
+ 
     </div>
   );
 }
