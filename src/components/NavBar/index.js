@@ -8,13 +8,19 @@ import {
   FormControl,
 } from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import InputForm from '../Form';
+import InputForm from "../Form";
+
+
+
 
 function NavBar() {
-  //function to update the drop down dates based on the database dates that have been submitted
+
+  //write function to update the drop down dates based on the database dates that have been submitted
 
   return (
+    <div>
     <Router>
+    <Switch>
       <Navbar bg="light" expand="lg">
         <Navbar.Brand href="#home">
           <Link to="../App" style={{ textDecoration: "none" }}>
@@ -29,11 +35,13 @@ function NavBar() {
                 Home
               </Link>
             </Nav.Link>
+            <Route path="/Form">
             <Nav.Link href="../Form">
-              <Link to="../Form" style={{ textDecoration: "none" }}>
+              <Link to="/Form" style={{ textDecoration: "none" }}>
                 Forms
               </Link>
             </Nav.Link>
+            </Route>
             <NavDropdown
               title="History of Achievements"
               id="basic-nav-dropdown"
@@ -51,7 +59,10 @@ function NavBar() {
           </Form>
         </Navbar.Collapse>
       </Navbar>
+      </Switch>
     </Router>
+    </div>
   );
 }
+
 export default NavBar;
