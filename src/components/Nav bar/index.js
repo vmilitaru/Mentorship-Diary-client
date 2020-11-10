@@ -1,12 +1,16 @@
 import React from "react";
 import "./navBar.css";
 
+
 function NavBar() {
+
+//function to update the drop down dates based on the database dates that have been submitted
+
   return (
       <div  className="nav">
     <nav className="nav-bar">
       <ul>
-        <li>Home</li>
+        <Link to="../App"><li>Home</li></Link>
         <li>Profile</li>
         <li>
           History
