@@ -1,29 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 // import NavBar from "../NavBar";
 import { Form, Button } from "react-bootstrap";
+import React, { useState } from "react";
 
 function InputForm() {
-  const 
-  
-  function onChange(){
-    console.log(.answer1)
+  const [q1, setq1] = useState("");
 
+  function handleqQ1Change(event) {
+    setq1(e.target.value);
+  }
 
-
-}
+  function onChange() {
+    console.log();
+  }
 
   return (
-
     //function for onChange
     //onSubmit on button//
-     <div>
+    <div>
       <Form>
         <Form.Group controlId="formq1">
           <Form.Label>Q1</Form.Label>
-          <Form.Control className="answer1" type="q1" placeholder="Enter answer here..." />
+          <Form.Control
+            onChange={handleQ1Change}
+            className="answer1"
+            type="q1"
+            placeholder="Enter answer here..."
+          />
         </Form.Group>
 
-        <Form.Group controlId="formq2" >
+        <Form.Group controlId="formq2">
           <Form.Label>Q2</Form.Label>
           <Form.Control type="q2" placeholder="Enter answer here..." />
         </Form.Group>
@@ -42,7 +48,7 @@ function InputForm() {
         {/* <Form.Group controlId="formBasicCheckbox">
     <Form.Check type="checkbox" label="Check me out" />
   </Form.Group> */}
-        <Button onClick = {onChange} variant="primary" type="submit">
+        <Button onClick={onChange} variant="primary" type="submit">
           Submit
         </Button>
       </Form>
