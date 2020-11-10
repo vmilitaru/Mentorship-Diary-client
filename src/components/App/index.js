@@ -1,8 +1,10 @@
+import React from 'react';
 import Form from "../Form";
-import "./App.css";
-
 import NavBar from '../Nav bar/index'
 import InputForm from '../Form/index';
+// import "./App.css";
+
+
 
 function App() {
   return (
