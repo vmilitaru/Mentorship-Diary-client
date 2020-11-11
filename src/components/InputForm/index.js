@@ -7,7 +7,7 @@ function InputForm() {
   const [q3, setq3] = useState("");
   const [q4, setq4] = useState("");
   const [q5, setq5] = useState("");
-  const [date, setDate] = useState(0);
+  const [week, setWeek] = useState(0);
 
   async function handleClick(e) {
     console.log("clicked");
@@ -17,7 +17,7 @@ function InputForm() {
       method: "POST",
 
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ data: { date, q1, q2, q3, q4, q5 } }),
+      body: JSON.stringify({ data: { week, q1, q2, q3, q4, q5 } }),
     };
     const response = await fetch(`http://localhost:3000`, requestOptions);
     const data = await response.json();
@@ -29,12 +29,12 @@ function InputForm() {
     //onSubmit on button//
     <div>
       <Form>
-        <Form.Group controlId="weekNum">
+        <Form.Group controlId="week">
           <Form.Label>Week number</Form.Label>
           <Form.Control
             autocomplete="off"
-            onChange={(e) => setDate(e.target.value)}
-            className="Date"
+            onChange={(e) => setWeek(e.target.value)}
+            className="Week"
             type="number"
             placeholder="Which week is it?"
           />

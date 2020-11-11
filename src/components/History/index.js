@@ -2,41 +2,44 @@ import React, { useState, useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
 
 function History() {
-  const [date, setDate] = useState(null);
+  const [week, setWeek] = useState(null);
   const [diary, setDiary] = useState([]);
 
   useEffect(() => {
-    async function getQ1() {
-      const res = await fetch(`http://localhost:3000/${date}`);
+    async function getDiary() {
+      const res = await fetch(`http://localhost:3000/${week}`);
       const data = await res.json();
       console.log(data);
       setDiary(data.payload);
     }
-    if (date !== null) {
-      getQ1();
+    if (week !== null) {
+      getDiary();
     }
-  }, [date]);
-  console.log(date);
+  }, [week]);
+  console.log(week);
   return (
     <div>
       <Dropdown>
         <Dropdown.Toggle variant="success" id="dropdown-basic">
-          Choose A Date
+          Choose which week
         </Dropdown.Toggle>
         <Dropdown.Menu>
-          <Dropdown.Item onClick={() => setDate(1)} href="#/action-1">
+          <Dropdown.Item onClick={() => setWeek(1)} href="#/action-1">
             1
           </Dropdown.Item>
-          <Dropdown.Item onClick={() => setDate(24)} href="#/action-2">
+          <Dropdown.Item onClick={() => setWeek(2)} href="#/action-2">
             2
           </Dropdown.Item>
-          <Dropdown.Item onClick={() => setDate(2)} href="#/action-3">
+          <Dropdown.Item onClick={() => setWeek(3)} href="#/action-3">
             3
+          </Dropdown.Item>
+          <Dropdown.Item onClick={() => setWeek(4)} href="#/action-4">
+            4
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
 
-      <p className="date">{diary.date} </p>
+      <p className="date">{diary.week} </p>
       <p className="q1">{diary.q1}</p>
       <p className="q2">{diary.q2}</p>
       <p className="q3">{diary.q3}</p>
