@@ -1,20 +1,40 @@
 import React, { useState, useEffect } from "react";
-import {Dropdown} from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 
 function History() {
-  const [answers, setAnswers] = useState("");
+  const [answers1, setAnswers1] = useState("");
+  // const [answers2, setAnswers2] = useState("");
+  // const [answers3, setAnswers3] = useState("");
+  // const [answers4, setAnswers4] = useState("");
+  // const [answers5, setAnswers5] = useState("");
+
+  //
 
   return (
-    <Dropdown>
-      <Dropdown.Toggle variant="success" id="dropdown-basic">
-        Dropdown Button
-      </Dropdown.Toggle>
-      <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
+    <div>
+      <Dropdown>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          Choose A Date
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item
+            onClick={(e) => setAnswers1(e.target.value)}
+            href="#/action-1"
+          >
+            11/11/20
+          </Dropdown.Item>
+          <Dropdown.Item href="#/action-2">10/11/20</Dropdown.Item>
+          <Dropdown.Item href="#/action-3">09/11/20</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+
+      <p className="date"> </p>
+      <p className="q1"></p>
+      <p className="q2"></p>
+      <p className="q3"></p>
+      <p className="q4"></p>
+      <p className="q5"></p>
+    </div>
   );
 }
 
