@@ -9,7 +9,12 @@ import { RiLogoutBoxLine } from "react-icons/ri";
 
 
 export const SidebarData = [
-  
+{
+    title: "Home",
+    path: "/",
+    icon: <AiOutlineHome />,
+    class: "nav-text",
+  },  
   {
     title: "Weekly Form",
     path: "/InputForm",
@@ -34,10 +39,5 @@ export const SidebarData = [
     icon: <RiLogoutBoxLine />,
     class: "nav-text",
   },
-  {
-    title: "Home",
-    path: "/",
-    icon: <AiOutlineHome />,
-    class: "nav-text",
-  },
+  
 ];
