@@ -1,12 +1,12 @@
 import React from 'react';
-import AiFillHome from 'react-icons/ai';
+import * as AiIcons from 'react-icons/ai';
 
 
 export const SidebarData = [
   {
     title: 'Home',
     path: '/',
-    icon: <AiFillHome />,
+    icon: <AiIcons.AiFillHome />,
     class: 'nav-text'
   },
   {
