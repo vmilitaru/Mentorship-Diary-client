@@ -18,8 +18,8 @@ function Navbar() {
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
-    <>
-    <Router>
+    <div>
+    
       <IconContext.Provider value={{ color: '#fff' }}>
         <div className='navbar'>
           <Link to='#' className='menu-bars'>
@@ -46,8 +46,8 @@ function Navbar() {
           </ul>
         </nav>
       </IconContext.Provider>
-      </Router>
-    </>
+    
+    </div>
   );
 }
 
