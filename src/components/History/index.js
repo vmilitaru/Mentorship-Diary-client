@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
 
 function History() {
-  const [answers1, setAnswers1] = useState("");
+  const [date, setDate] = useState("");
   // const [answers2, setAnswers2] = useState("");
   // const [answers3, setAnswers3] = useState("");
   // const [answers4, setAnswers4] = useState("");
@@ -18,7 +18,7 @@ function History() {
         </Dropdown.Toggle>
         <Dropdown.Menu>
           <Dropdown.Item
-            onClick={(e) => setAnswers1(e.target.value)}
+            onClick={(e) => setDate(e.target.value)}
             href="#/action-1"
           >
             11/11/20
