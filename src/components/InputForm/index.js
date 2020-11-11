@@ -18,22 +18,14 @@ function InputForm() {
       method: "POST",
 
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ data: { q1, q2, q3, q4, q5 } }),
+      body: JSON.stringify({ data: {date, q1, q2, q3, q4, q5 } }),
     };
     const response = await fetch(`http://localhost:3000`, requestOptions);
     const data = await response.json();
     setq1({ q1: data.q1 });
   }
 
-  useEffect(() => {
-    async function getQ1() {
-      const res = await fetch("http://localhost:3000");
-      const data = await res.json();
-      console.log(data.payload);
-      setq1(data.payload);
-    }
-    getQ1();
-  }, []);
+ 
 
   return (
     //function for onChange
