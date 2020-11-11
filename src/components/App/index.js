@@ -1,24 +1,14 @@
-import React from "react";
+// import Form from "../Form";
+import "./App.css";
 
-import NavBar from "../NavBar/index";
-import InputForm from "../InputForm/index";
-
-// import "./App.css";
+import NavBar from '../NavBar';
+// import InputForm from '../Form/index';
 
 function App() {
   return (
-    <div>
-      <NavBar />
-      <InputForm />
-      <p></p>
+    <div className="App">
+      <NavBar/>
 
-      {/* <Router>
-    <Switch>
-    <Route path="/Form">
-    <InputForm/>
-    </Route>
-    </Switch>
-    </Router>  */}
     </div>
   );
 }
