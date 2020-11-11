@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import 
+import {Dropdown} from "react-bootstrap";
 
 function History() {
   const [answers, setAnswers] = useState("");
@@ -17,3 +17,5 @@ function History() {
     </Dropdown>
   );
 }
+
+export default History;
