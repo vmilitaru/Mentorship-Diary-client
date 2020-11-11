@@ -1,6 +1,5 @@
-// import Form from "../Form";
+import React from "react";
 import "./App.css";
-
 import NavBar from "../NavBar";
 import InputForm from "../InputForm/index";
 import History from "../History/index";

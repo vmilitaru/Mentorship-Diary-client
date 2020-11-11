@@ -3,13 +3,8 @@ import { Dropdown } from "react-bootstrap";
 
 function History() {
   const [date, setDate] = useState(null);
-  const [diary,setDiary] = useState([]);
-  // const [answers2, setAnswers2] = useState("");
-  // const [answers3, setAnswers3] = useState("");
-  // const [answers4, setAnswers4] = useState("");
-  // const [answers5, setAnswers5] = useState("");
+  const [diary, setDiary] = useState([]);
 
-  //fetch req
   useEffect(() => {
     async function getQ1() {
       const res = await fetch(`http://localhost:3000/${date}`);
@@ -17,10 +12,9 @@ function History() {
       console.log(data);
       setDiary(data.payload);
     }
-    if (date!== null){
+    if (date !== null) {
       getQ1();
     }
-   
   }, [date]);
   console.log(date);
   return (
@@ -30,17 +24,18 @@ function History() {
           Choose A Date
         </Dropdown.Toggle>
         <Dropdown.Menu>
-          <Dropdown.Item
-            onClick={() => setDate(1)}
-            href="#/action-1"
-          >
+          <Dropdown.Item onClick={() => setDate(1)} href="#/action-1">
             1
           </Dropdown.Item>
-          <Dropdown.Item onClick={() => setDate(24)} href="#/action-2">2</Dropdown.Item>
-          <Dropdown.Item onClick={() => setDate(2)} href="#/action-3">3</Dropdown.Item>
+          <Dropdown.Item onClick={() => setDate(24)} href="#/action-2">
+            2
+          </Dropdown.Item>
+          <Dropdown.Item onClick={() => setDate(2)} href="#/action-3">
+            3
+          </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-     
+
       <p className="date">{diary.date} </p>
       <p className="q1">{diary.q1}</p>
       <p className="q2">{diary.q2}</p>
