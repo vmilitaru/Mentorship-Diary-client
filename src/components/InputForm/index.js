@@ -8,7 +8,7 @@ function InputForm() {
   const [q3, setq3] = useState("");
   const [q4, setq4] = useState("");
   const [q5, setq5] = useState("");
-  const [weekNum, setWeekNum] = useState(0);
+  const [date, setDate] = useState(0);
 
   async function handleClick(e) {
     console.log("clicked");
@@ -44,8 +44,8 @@ function InputForm() {
           <Form.Label>Week number</Form.Label>
           <Form.Control
             autocomplete="off"
-            onChange={(e) => setWeekNum(e.target.value)}
-            className="weekNumber"
+            onChange={(e) => setDate(e.target.value)}
+            className="Date"
             type="number"
             placeholder="Which week is it?"
           />
