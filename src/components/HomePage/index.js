@@ -1,9 +1,15 @@
 import React from "react";
+import {Jumbotron} from 'react-bootstrap';
+import '../App/App.css';
 
 function HomePage() {
   return (
-    <div>
-      <p> Home page text</p>
+    <div className="page-intro">
+     <Jumbotron>
+  <h1>Homepage</h1>
+  <p>
+  </p>
+</Jumbotron>
     </div>
   );
 }

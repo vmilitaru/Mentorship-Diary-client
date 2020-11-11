@@ -33,9 +33,11 @@ export default function Signup() {
 
   return (
     <>
+    <br></br>
+    <br></br>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">Sign Up</h2>
+          <h2 className="text-center mt-4 mb-4">Sign Up</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
@@ -56,7 +58,7 @@ export default function Signup() {
           </Form>
         </Card.Body>
       </Card>
-      <div className="w-100 text-center mt-2 pText">
+      <div className="w-100 text-center mt-2">
         Already have an account?{" "}
         <Link className="pTextLink " to="/login">
           Log In

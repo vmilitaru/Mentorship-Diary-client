@@ -17,13 +17,13 @@ export const SidebarData = [
   },  
   {
     title: "Weekly Form",
-    path: "/InputForm",
+    path: "/form",
     icon: <AiOutlineForm />,
     class: "nav-text",
   },
   {
     title: "Achievement History",
-    path: "/History",
+    path: "/history",
     icon: <AiOutlineHistory />,
     class: "nav-text",
   },
