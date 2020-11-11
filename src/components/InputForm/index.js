@@ -8,6 +8,7 @@ function InputForm() {
   const [q3, setq3] = useState("");
   const [q4, setq4] = useState("");
   const [q5, setq5] = useState("");
+  const [weekNum, setWeekNum] = useState(0);
 
   async function handleClick(e) {
     console.log("clicked");
@@ -39,6 +40,17 @@ function InputForm() {
     //onSubmit on button//
     <div>
       <Form>
+        <Form.Group controlId="weekNum">
+          <Form.Label>Week number</Form.Label>
+          <Form.Control
+            autocomplete="off"
+            onChange={(e) => setWeekNum(e.target.value)}
+            className="weekNumber"
+            type="number"
+            placeholder="Which week is it?"
+          />
+        </Form.Group>
+
         <Form.Group controlId="formq1">
           <Form.Label>Q1</Form.Label>
           <Form.Control
