@@ -7,9 +7,12 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
+   <div>
+      
     <Router>
+      <NavBar/>
       <div className="App">
-        <NavBar />
+        
 
         <Switch>
           <Route path="/InputForm">
@@ -24,6 +27,7 @@ function App() {
         </Switch>
       </div>
     </Router>
+    </div>
   );
 }
 
