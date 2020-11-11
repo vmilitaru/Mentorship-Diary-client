@@ -12,10 +12,11 @@ import UpdateProfile from "./UpdateProfile";
 function AuthApp() {
   return (
     <Container
-      className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
+    // className="d-flex align-items-center justify-content-center"
+    // style={{ minHeight: "100vh" }}
     >
-      <div className="w-100">
+      <div>
+        {/* className="w-100" */}
         <Router>
           <AuthProvider>
             <Switch>
