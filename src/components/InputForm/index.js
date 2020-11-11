@@ -11,7 +11,6 @@ function InputForm() {
 
   async function handleClick(e) {
     console.log("clicked");
-    e.preventDefault();
 
     // POST request using fetch inside useEffect React hook
     const requestOptions = {
@@ -27,7 +26,7 @@ function InputForm() {
 
   useEffect(() => {
     async function getQ1() {
-      const res = await fetch("http://localhost:3000/5");
+      const res = await fetch("http://localhost:3000");
       const data = await res.json();
       console.log(data.payload);
       setq1(data.payload);
@@ -43,6 +42,7 @@ function InputForm() {
         <Form.Group controlId="formq1">
           <Form.Label>Q1</Form.Label>
           <Form.Control
+            autocomplete="off"
             onChange={(e) => setq1(e.target.value)}
             className="answer1"
             type="q1"
@@ -53,6 +53,7 @@ function InputForm() {
         <Form.Group controlId="formq2">
           <Form.Label>Q2</Form.Label>
           <Form.Control
+            autocomplete="off"
             onChange={(e) => setq2(e.target.value)}
             type="q2"
             placeholder="Enter answer here..."
@@ -61,6 +62,7 @@ function InputForm() {
         <Form.Group controlId="formq3">
           <Form.Label>Q3</Form.Label>
           <Form.Control
+            autocomplete="off"
             onChange={(e) => setq3(e.target.value)}
             type="q3"
             placeholder="Enter answer here..."
@@ -69,6 +71,7 @@ function InputForm() {
         <Form.Group controlId="formq4">
           <Form.Label>Q4</Form.Label>
           <Form.Control
+            autocomplete="off"
             onChange={(e) => setq4(e.target.value)}
             type="q4"
             placeholder="Enter answer here..."
@@ -77,6 +80,7 @@ function InputForm() {
         <Form.Group controlId="formq5">
           <Form.Label>Q5</Form.Label>
           <Form.Control
+            autocomplete="off"
             onChange={(e) => setq5(e.target.value)}
             type="q5"
             placeholder="Enter answer here..."
