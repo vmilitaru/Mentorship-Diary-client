@@ -1,13 +1,30 @@
-import React, { useState, useEffect } from "react";
-import { Form, Button, Jumbotron } from "react-bootstrap";
+import React, { useContext, useState, useEffect } from "react";
+import { Form, Button, Jumbotron, Col } from "react-bootstrap";
+import { auth } from "../../firebase/firebase";
+
+const AuthContext = React.createContext();
+
+export function useAuth() {
+  return useContext(AuthContext);
+}
 
 function InputForm() {
+  const [currentUser, setCurrentUser] = useState();
   const [q1, setq1] = useState("");
   const [q2, setq2] = useState("");
   const [q3, setq3] = useState("");
   const [q4, setq4] = useState("");
   const [q5, setq5] = useState("");
   const [week, setWeek] = useState(0);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setCurrentUser(user.uid);
+      console.log(currentUser);
+    });
+
+    return unsubscribe;
+  }, [currentUser]);
 
   async function handleClick(e) {
     console.log("clicked");
@@ -34,6 +51,18 @@ function InputForm() {
           <p></p>
         </Jumbotron>
       </div>
+
+
+      <Form.Group controlId="formPlaintextEmail">
+        <Form.Label column sm="2">
+          id
+        </Form.Label>
+        <Col sm="10">
+          <Form.Control plaintext readOnly defaultValue={currentUser} />
+        </Col>
+      </Form.Group>
+
+
 
       <Form>
         <Form.Group controlId="week">
