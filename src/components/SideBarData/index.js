@@ -32,10 +32,10 @@ export const SidebarData = [
     icon: <AiOutlineContacts />,
     class: "nav-text",
   },
-  {
-    title: "Log Out",
-    path: "/login",
-    icon: <RiLogoutBoxLine />,
-    class: "nav-text",
-  },
+  // {
+  //   title: "Log Out",
+  //   path: "/login",
+  //   icon: <RiLogoutBoxLine />,
+  //   class: "nav-text",
+  // },
 ];
