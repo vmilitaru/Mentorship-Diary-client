@@ -48,7 +48,7 @@ function InputForm() {
         <Jumbotron>
           <h1>Weekly Form</h1>
           <br></br>
-          <p>Intro to weekly form here</p>
+          <p>This tool will help you to structure your meetings and leave you with a diary documenting your conversations as well as your journey through the School Of Code.</p>
           <p></p>
         </Jumbotron>
       </div>
@@ -77,6 +77,7 @@ function InputForm() {
             placeholder="Which week is it?"
           />
         </Form.Group>
+        <br></br>
 
         <Form.Group controlId="formq1">
           <Form.Label style = {{fontSize:"22px", fontWeight:"bold"}}>What have you achieved this week?</Form.Label>
@@ -90,7 +91,7 @@ function InputForm() {
             placeholder="Think about new subjects you have covered, how could you use them in the future? "
           />
         </Form.Group>
-
+<br></br>
         <Form.Group controlId="formq2">
           <Form.Label style = {{fontSize:"22px", fontWeight:"bold"}}>
             How would you implement what you have learned day to day?
@@ -103,6 +104,7 @@ function InputForm() {
             placeholder="What are the technical or personal applications?"
           />
         </Form.Group>
+        <br></br>
         <Form.Group controlId="formq3">
           <Form.Label style = {{fontSize:"22px", fontWeight:"bold"}}>What could you improve on?</Form.Label>
           <Form.Control
@@ -113,6 +115,7 @@ function InputForm() {
             placeholder="How would you go about improving them and what is holding you back."
           />
         </Form.Group>
+        <br></br>
         <Form.Group controlId="formq4">
           <Form.Label style = {{fontSize:"22px", fontWeight:"bold"}}>
             Share an example of something that you struggled with?
@@ -125,6 +128,7 @@ function InputForm() {
             placeholder="Share a tricky piece of code or a problem that you would like some help with."
           />
         </Form.Group>
+        <br></br>
         <Form.Group controlId="formq5">
           <Form.Label style = {{fontSize:"22px", fontWeight:"bold"}}>What do you want to achieve next?</Form.Label>
           <Form.Control
@@ -135,6 +139,7 @@ function InputForm() {
             placeholder="Set some goals for the week."
           />
         </Form.Group>
+        <br></br>
         <Button onClick={handleClick} variant="primary" type="submit">
           Submit
         </Button>
