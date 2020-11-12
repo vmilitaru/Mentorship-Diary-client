@@ -1,8 +1,9 @@
 import React, { useContext, useState, useEffect } from "react";
 import { auth } from "../../firebase/firebase";
-import { Jumbotron, Dropdown } from "react-bootstrap";
+import { Jumbotron, Dropdown} from "react-bootstrap";
 import History from "./index";
 import stars from '../images/starryNight.jpeg';
+import './dropDrown.css';
 
 const AuthContext = React.createContext();
 
@@ -24,7 +25,7 @@ const DropDown = () => {
 
   return (
     <div className="page-intro">
-      <Jumbotron  style = {{backgroundImage:`url(${stars})`,backgroundSize:"cover", backgroundPosition:"center"}} >
+      <Jumbotron  style = {{backgroundImage:`url(${stars})`,backgroundSize:"cover", backgroundPosition:"center", borderRadius: "0"}} >
         <h1 style={{color:"white",fontSize:"24px"}}>History of Achievements</h1>
         <br></br>
         <p style={{color:"white"}}>
@@ -32,13 +33,12 @@ const DropDown = () => {
           from previous weekly forms.
         </p>
         <br></br>
-
-        <p>
+        <p> 
           <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
+            <Dropdown.Toggle style={{backgroundColor: "black"}}>
               Choose Week Number
             </Dropdown.Toggle>
-            <Dropdown.Menu>
+            <Dropdown.Menu className="dropdown-css" >
               <Dropdown.Item onClick={() => setWeek(1)}>1</Dropdown.Item>
               <Dropdown.Item onClick={() => setWeek(2)}>2</Dropdown.Item>
               <Dropdown.Item onClick={() => setWeek(3)}>3</Dropdown.Item>

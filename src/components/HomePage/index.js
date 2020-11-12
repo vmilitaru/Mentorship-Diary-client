@@ -6,11 +6,12 @@ import logo from '../images/2.png';
 
 function HomePage() {
   return (
+    <>
       <div>
     <div className="page-intro">
-     <Jumbotron style = {{backgroundImage:`url(${stars})`,backgroundSize:"cover", backgroundPosition:"center"}} >
+     <Jumbotron style = {{backgroundImage:`url(${stars})`,backgroundSize:"cover", backgroundPosition:"center", borderRadius: "0"}} >
     
-  <h1 style={{color:"white"}}>MENTOR DIARY</h1>
+  <h1 style={{color:"white"}}>Mentor Diary</h1>
  
 </Jumbotron>
 </div>
@@ -19,9 +20,12 @@ function HomePage() {
   As we embark on this exciting and nerve-wracking experience, remember that everyone had to start somewhere. By embracing the relationship with your mentor you will learn to focus on your goals and help you to see how the subjects you are studying now will help your career in the future.  It is also an incredible opportunity to extend your professional
    network and learn to engage with established members of the tech community.
   </p>
-  <img src = {logo} style = {{width:"20%", display: "right"}} /> 
+  <img src = {logo} style = {{width:"20%", display: "right"}} alt="Mentor Diary Logo" /> 
 </div>
 </div>
+<br></br>
+<br></br>
+</>
 
   );
 }
