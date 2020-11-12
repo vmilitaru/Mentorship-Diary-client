@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Form, Button, Jumbotron, Col } from "react-bootstrap";
 import { auth } from "../../firebase/firebase";
+import stars from '../images/starryNight.jpeg';
 
 const AuthContext = React.createContext();
 
@@ -45,10 +46,10 @@ function InputForm() {
   return (
     <>
       <div className="page-intro">
-        <Jumbotron>
-          <h1>Weekly Form</h1>
+        <Jumbotron style = {{backgroundImage:`url(${stars})`,backgroundSize:"cover", backgroundPosition:"center"}} >
+          <h1  style={{color:"white"}}>Weekly Form</h1>
           <br></br>
-          <p>This tool will help you to structure your meetings and leave you with a diary documenting your conversations as well as your journey through the School Of Code.</p>
+          <p  style={{color:"white", fontSize:"24px"}}>This tool will help you to structure your meetings and leave you with a diary documenting your conversations as well as your journey through the School Of Code.</p>
           <p></p>
         </Jumbotron>
       </div>
