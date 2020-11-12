@@ -2,6 +2,8 @@ import React, { useContext, useState, useEffect } from "react";
 import { auth } from "../../firebase/firebase";
 import { Jumbotron, Dropdown } from "react-bootstrap";
 import History from "./index";
+import stars from '../images/starryNight.jpeg';
+
 const AuthContext = React.createContext();
 
 export function useAuth() {
@@ -22,10 +24,10 @@ const DropDown = () => {
 
   return (
     <div className="page-intro">
-      <Jumbotron>
-        <h1>History of Achievements</h1>
+      <Jumbotron  style = {{backgroundImage:`url(${stars})`,backgroundSize:"cover", backgroundPosition:"center"}} >
+        <h1 style={{color:"white",fontSize:"24px"}}>History of Achievements</h1>
         <br></br>
-        <p>
+        <p style={{color:"white"}}>
           Use the drop-down bar below to look back and reflect on your progress
           from previous weekly forms.
         </p>

@@ -7,9 +7,9 @@ function Contact() {
     return (
         <div className="page-intro">
             <Jumbotron style = {{backgroundImage:`url(${stars})`,backgroundSize:"cover", backgroundPosition:"center"}} >
-  <h1>Contact</h1>
+  <p style = {{color:"white", fontSize:"40px",fontWeight:"550"}}>Contact</p>
   <br></br>
-  <p>
+  <p style ={{color:"white"}}>
    Contact content here
   </p>
 </Jumbotron>
