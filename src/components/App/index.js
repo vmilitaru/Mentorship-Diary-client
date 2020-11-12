@@ -5,22 +5,27 @@ import InputForm from "../InputForm/index";
 import History from "../History/index";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomePage from "../HomePage";
+import Contact from '../Contact';
 
 function App() {
   return (
     <div>
+    
       <Router>
         <NavBar />
         <div className="App">
           <Switch>
-            <Route path="/InputForm">
+            <Route path="/form">
               <InputForm />
             </Route>
-            <Route path="/History">
+            <Route path="/history">
               <History />
             </Route>
             <Route path="/">
-              <HomePage />
+              <HomePage/>
+            </Route>
+            <Route path="/contact">
+              <Contact />
             </Route>
           </Switch>
         </div>

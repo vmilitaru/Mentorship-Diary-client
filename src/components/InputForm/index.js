@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Jumbotron } from "react-bootstrap";
 
 function InputForm() {
   const [q1, setq1] = useState("");
@@ -25,12 +25,22 @@ function InputForm() {
   }
 
   return (
-    //function for onChange
-    //onSubmit on button//
-    <div>
+    <>
+    <div className="page-intro"> 
+<Jumbotron>
+  <h1>Weekly Form</h1>
+  <br></br>
+  <p>
+    Intro to weekly form here
+  </p>
+  <p>
+  </p>
+</Jumbotron>
+</div>
+
       <Form>
         <Form.Group controlId="week">
-          <Form.Label>Week number</Form.Label>
+          <Form.Label>Week Number</Form.Label>
           <Form.Control
             autocomplete="off"
             onChange={(e) => setWeek(e.target.value)}
@@ -41,7 +51,7 @@ function InputForm() {
         </Form.Group>
 
         <Form.Group controlId="formq1">
-          <Form.Label>Q1</Form.Label>
+          <Form.Label>What have you achieved this week?</Form.Label>
           <Form.Control
             autocomplete="off"
             onChange={(e) => setq1(e.target.value)}
@@ -52,7 +62,7 @@ function InputForm() {
         </Form.Group>
 
         <Form.Group controlId="formq2">
-          <Form.Label>Q2</Form.Label>
+          <Form.Label>How would you implement what you have learned day to day?</Form.Label>
           <Form.Control
             autocomplete="off"
             onChange={(e) => setq2(e.target.value)}
@@ -61,7 +71,7 @@ function InputForm() {
           />
         </Form.Group>
         <Form.Group controlId="formq3">
-          <Form.Label>Q3</Form.Label>
+          <Form.Label>What could you improve on?</Form.Label>
           <Form.Control
             autocomplete="off"
             onChange={(e) => setq3(e.target.value)}
@@ -70,7 +80,7 @@ function InputForm() {
           />
         </Form.Group>
         <Form.Group controlId="formq4">
-          <Form.Label>Q4</Form.Label>
+          <Form.Label>Share an example of something that you struggled with?</Form.Label>
           <Form.Control
             autocomplete="off"
             onChange={(e) => setq4(e.target.value)}
@@ -79,7 +89,7 @@ function InputForm() {
           />
         </Form.Group>
         <Form.Group controlId="formq5">
-          <Form.Label>Q5</Form.Label>
+          <Form.Label>What do I want to achieve next?</Form.Label>
           <Form.Control
             autocomplete="off"
             onChange={(e) => setq5(e.target.value)}
@@ -87,14 +97,11 @@ function InputForm() {
             placeholder="Enter answer here..."
           />
         </Form.Group>
-        {/* <Form.Group controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
-  </Form.Group> */}
         <Button onClick={handleClick} variant="primary" type="submit">
           Submit
         </Button>
       </Form>
-    </div>
+    </>
   );
 }
 
