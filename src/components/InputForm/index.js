@@ -54,14 +54,14 @@ function InputForm() {
         </Jumbotron>
       </div>
 
-      <Form.Group controlId="formPlaintextEmail">
+      {/* <Form.Group controlId="formPlaintextEmail">
         <Form.Label column sm="2">
           id
         </Form.Label>
         <Col sm="10">
           <Form.Control plaintext readOnly defaultValue={uuid} />
         </Col>
-      </Form.Group>
+      </Form.Group> */}
 
       <Form>
         <Form.Group controlId="week">
@@ -146,7 +146,7 @@ function InputForm() {
           />
         </Form.Group>
         <br></br>
-        <Button onClick={handleClick} variant="primary" type="submit">
+        <Button style = {{backgroundColor:"black",border:"none"}} onClick={handleClick} variant="primary" type="submit">
           Submit
         </Button>
       </Form>
