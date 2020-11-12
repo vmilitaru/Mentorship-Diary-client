@@ -3,6 +3,8 @@ import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import "./Login.css";
+import "../NavBar/soc-logo.png";
+
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -10,6 +12,7 @@ export default function Login() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();
+  
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -31,7 +34,7 @@ export default function Login() {
     <br></br>
     <br></br>
       <Card className="container">
-      <img src="../../../soc-logo.png" alt="School of Code Logo" style={{width:"50px", height:"50px"}}/>
+      
         <Card.Body className="box">
           <h2 className="text-center mt-4 mb-4">Log In</h2>
           {error && <Alert variant="danger">{error}</Alert>}
