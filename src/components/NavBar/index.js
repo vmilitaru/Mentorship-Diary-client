@@ -9,6 +9,7 @@ import socLogoPng from "./soc-logo.png";
 import { useAuth } from "../../contexts/AuthContext";
 import { useHistory } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { RiLogoutBoxLine } from "react-icons/ri";
 
 function Navbar() {
   const [error, setError] = useState("");
@@ -16,9 +17,9 @@ function Navbar() {
   const history = useHistory();
   console.log(currentUser);
   const [sidebar, setSidebar] = useState(false);
+
   async function handleLogout() {
     setError("");
-
     try {
       await logout();
       history.push("/login");
@@ -38,8 +39,8 @@ function Navbar() {
           </Link>
           <img
             src={socLogoPng}
-            alt="soc sign"
-            style={{ height: "50px", display: "flex" }}
+            alt="School of Code Logo"
+            style={{ height: "50px", display: "right" }}
           ></img>
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
@@ -59,14 +60,9 @@ function Navbar() {
                 </li>
               );
             })}
-            <button
-              style={{ color: "blue", margin: " 10px 50px" }}
-              className="pText"
-              variant="link"
-              onClick={handleLogout}
-            >
+            <RiLogoutBoxLine style={{marginLeft: "31"}}/><Button className="nav-text" onClick={handleLogout} style={{backgroundColor:"#060b26", border: "none"}} >
               Log Out
-            </button>
+              </Button>
           </ul>
         </nav>
       </IconContext.Provider>
