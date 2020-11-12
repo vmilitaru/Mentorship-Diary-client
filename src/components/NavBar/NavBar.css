@@ -4,6 +4,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  
 }
 
 .menu-bars {
@@ -70,3 +71,6 @@
 span {
   margin-left: 16px;
 }
+#root {
+  margin: 0;
+} 

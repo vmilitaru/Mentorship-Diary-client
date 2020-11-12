@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link } from "react-router-dom";
+import "./ForgotPassword.css"
 
 export default function ForgotPassword() {
   const emailRef = useRef();
@@ -27,10 +28,10 @@ export default function ForgotPassword() {
   }
 
   return (
-    <>
+    <div className="forgotPasswordPage">
     <br></br>
     <br></br>
-      <Card>
+      <Card id="cardWidth">
         <Card.Body>
           <h2 className="text-center mt-4 mb-4">Password Reset</h2>
           {error && <Alert variant="danger">{error}</Alert>}
@@ -40,18 +41,20 @@ export default function ForgotPassword() {
               <Form.Label>Email</Form.Label>
               <Form.Control type="email" ref={emailRef} required />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <Button
+            style={{ backgroundColor: "black", border: "none" }}
+             disabled={loading} className="w-100" type="submit">
               Reset Password
             </Button>
           </Form>
           <div className="w-100 text-center mt-3">
-            <Link to="/login">Login</Link>
+            <Link className="logIn" to="/login">Login</Link>
           </div>
         </Card.Body>
       </Card>
-      <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/signup">Sign Up</Link>
+      <div id = "needAnAccount" className="w-100 text-center mt-2">
+        Need an account? <Link className="pTextLink" to="/signup">Sign Up</Link>
       </div>
-    </>
+    </div>
   );
 }

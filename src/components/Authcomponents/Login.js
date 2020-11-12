@@ -29,10 +29,11 @@ export default function Login() {
   }
 
   return (
-    <>
+    <div className="loginPage">
       <br></br>
       <br></br>
-      <Card className="container" style={{ width: "400px" }}>
+      <Card className="container" id="cardWidth" >
+      
         <Card.Body className="box">
           <h2 className="text-center mt-4 mb-4">Log In</h2>
           {error && <Alert variant="danger">{error}</Alert>}
@@ -55,18 +56,18 @@ export default function Login() {
             </Button>
           </Form>
           <div className="w-100 text-center mt-3">
-            <Link className="pTextLink " to="/forgot-password">
+            <Link className="forgotPassword " to="/forgot-password">
               Forgot Password?
             </Link>
           </div>
         </Card.Body>
       </Card>
-      <div className="w-100 text-center mt-2">
+      <div id="needAnAccount" className="w-100 text-center mt-2">
         Need an account?{" "}
         <Link className="pTextLink " to="/signup">
           Sign Up
         </Link>
       </div>
-    </>
+    </div>
   );
 }

@@ -11,6 +11,7 @@ import UpdateProfile from "./UpdateProfile";
 
 function AuthApp() {
   return (
+    
     <Container
     // className="d-flex align-items-center justify-content-center"
     // style={{ minHeight: "100vh" }}
@@ -30,6 +31,7 @@ function AuthApp() {
         </Router>
       </div>
     </Container>
+  
   );
 }
 
