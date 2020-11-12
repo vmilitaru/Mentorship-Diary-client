@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import stars from '../images/starryNight.jpeg';
 
 import { Accordion, Card, Button } from "react-bootstrap";
 import "../App/App.css";

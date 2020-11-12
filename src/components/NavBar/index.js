@@ -5,7 +5,7 @@ import { SidebarData } from "../SideBarData";
 import "./NavBar.css";
 import { IconContext } from "react-icons";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import socLogoPng from "./soc-logo.png";
+import socLogoPng from "../images/soc-logo.png";
 import { useAuth } from "../../contexts/AuthContext";
 import { useHistory } from "react-router-dom";
 import { Button } from "react-bootstrap";
