@@ -75,7 +75,7 @@ function History({ week, uuid }) {
             <Card.Header>
               <Card.Header>
                 <Accordion.Toggle as={Button} variant="link" eventKey="5">
-                  What do I want to achieve next?
+                  Is there anything else you would like to cover in this session?
                 </Accordion.Toggle>
               </Card.Header>
               <Accordion.Collapse eventKey="5">

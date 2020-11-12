@@ -27,11 +27,13 @@ function InputForm() {
     return unsubscribe;
   }, [uuid]);
 
-  async function handleClick(e) {
+  function handleSubmit(e){
     e.preventDefault();
-    console.log("clicked");
+    e.target.reset();
+   }
 
-    // POST request using fetch inside useEffect React hook
+  async function handleClick() {
+    console.log("clicked");
     const requestOptions = {
       method: "POST",
 
@@ -63,7 +65,7 @@ function InputForm() {
         </Col>
       </Form.Group> */}
 
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Form.Group controlId="week">
           <Form.Label style={{ fontSize: "22px", fontWeight: "bold" }}>
             Week Number
@@ -135,14 +137,14 @@ function InputForm() {
         <br></br>
         <Form.Group controlId="formq5">
           <Form.Label style={{ fontSize: "22px", fontWeight: "bold" }}>
-            What do you want to achieve next?
+          Is there anything else you would like to cover in this session?
           </Form.Label>
           <Form.Control
             as="textarea"
             rows={3}
             autocomplete="off"
             onChange={(e) => setq5(e.target.value)}
-            placeholder="Set some goals for the week."
+            placeholder="Enter your answer here..."
           />
         </Form.Group>
         <br></br>
