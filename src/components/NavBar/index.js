@@ -10,21 +10,25 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
+import socLogoPng from "./soc-logo.png"
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
+  
 
   return (
     <div>
+     
     
       <IconContext.Provider value={{ color: '#fff' }}>
         <div className='navbar'>
+        
           <Link to='#' className='menu-bars'>
             <FaBars onClick={showSidebar} />
           </Link>
+          <img src = {socLogoPng}alt="soc sign" style = {{height:"50px",display:"flex"}}></img>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>
@@ -44,7 +48,9 @@ function Navbar() {
               );
             })}
           </ul>
+          
         </nav>
+
       </IconContext.Provider>
     
     </div>
