@@ -9,25 +9,25 @@ export function useAuth() {
 }
 
 function InputForm() {
-  const [currentUser, setCurrentUser] = useState();
   const [q1, setq1] = useState("");
   const [q2, setq2] = useState("");
   const [q3, setq3] = useState("");
   const [q4, setq4] = useState("");
   const [q5, setq5] = useState("");
   const [week, setWeek] = useState(0);
+  const [uuid, setUuid] = useState("");
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
-      setCurrentUser(user.uid);
-      console.log(currentUser);
+      setUuid(user.uid);
+      console.log(uuid);
     });
 
     return unsubscribe;
-  }, [currentUser]);
+  }, [uuid]);
 
   async function handleClick(e) {
-    e.preventDefault()
+    e.preventDefault();
     console.log("clicked");
 
     // POST request using fetch inside useEffect React hook
@@ -35,7 +35,7 @@ function InputForm() {
       method: "POST",
 
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ data: { week, q1, q2, q3, q4, q5 } }),
+      body: JSON.stringify({ data: { uuid, week, q1, q2, q3, q4, q5 } }),
     };
     const response = await fetch(`http://localhost:3000`, requestOptions);
     const data = await response.json();
@@ -53,37 +53,38 @@ function InputForm() {
         </Jumbotron>
       </div>
 
-
       <Form.Group controlId="formPlaintextEmail">
         <Form.Label column sm="2">
           id
         </Form.Label>
         <Col sm="10">
-          <Form.Control plaintext readOnly defaultValue={currentUser} />
+          <Form.Control plaintext readOnly defaultValue={uuid} />
         </Col>
       </Form.Group>
 
-
-
       <Form>
         <Form.Group controlId="week">
-          <Form.Label style = {{fontSize:"22px", fontWeight:"bold"}}>Week Number</Form.Label>
+          <Form.Label style={{ fontSize: "22px", fontWeight: "bold" }}>
+            Week Number
+          </Form.Label>
           <Form.Control
-            
             autocomplete="off"
             onChange={(e) => setWeek(e.target.value)}
             className="Week"
             type="number"
+            min="1"
+            max="16"
             placeholder="Which week is it?"
           />
         </Form.Group>
 
         <Form.Group controlId="formq1">
-          <Form.Label style = {{fontSize:"22px", fontWeight:"bold"}}>What have you achieved this week?</Form.Label>
+          <Form.Label style={{ fontSize: "22px", fontWeight: "bold" }}>
+            What have you achieved this week?
+          </Form.Label>
           <Form.Control
-          as = "textarea"
-          rows = {3}
-          
+            as="textarea"
+            rows={3}
             autocomplete="off"
             onChange={(e) => setq1(e.target.value)}
             className="answer1"
@@ -92,44 +93,48 @@ function InputForm() {
         </Form.Group>
 
         <Form.Group controlId="formq2">
-          <Form.Label style = {{fontSize:"22px", fontWeight:"bold"}}>
+          <Form.Label style={{ fontSize: "22px", fontWeight: "bold" }}>
             How would you implement what you have learned day to day?
           </Form.Label>
           <Form.Control
-          as = "textarea"
-          rows = {3}
+            as="textarea"
+            rows={3}
             autocomplete="off"
             onChange={(e) => setq2(e.target.value)}
             placeholder="What are the technical or personal applications?"
           />
         </Form.Group>
         <Form.Group controlId="formq3">
-          <Form.Label style = {{fontSize:"22px", fontWeight:"bold"}}>What could you improve on?</Form.Label>
+          <Form.Label style={{ fontSize: "22px", fontWeight: "bold" }}>
+            What could you improve on?
+          </Form.Label>
           <Form.Control
-          as = "textarea"
-          rows = {3}
+            as="textarea"
+            rows={3}
             autocomplete="off"
             onChange={(e) => setq3(e.target.value)}
             placeholder="How would you go about improving them and what is holding you back."
           />
         </Form.Group>
         <Form.Group controlId="formq4">
-          <Form.Label style = {{fontSize:"22px", fontWeight:"bold"}}>
+          <Form.Label style={{ fontSize: "22px", fontWeight: "bold" }}>
             Share an example of something that you struggled with?
           </Form.Label>
           <Form.Control
-          as = "textarea"
-          rows = {3}
+            as="textarea"
+            rows={3}
             autocomplete="off"
             onChange={(e) => setq4(e.target.value)}
             placeholder="Share a tricky piece of code or a problem that you would like some help with."
           />
         </Form.Group>
         <Form.Group controlId="formq5">
-          <Form.Label style = {{fontSize:"22px", fontWeight:"bold"}}>What do you want to achieve next?</Form.Label>
+          <Form.Label style={{ fontSize: "22px", fontWeight: "bold" }}>
+            What do you want to achieve next?
+          </Form.Label>
           <Form.Control
-          as = "textarea"
-          rows = {3}
+            as="textarea"
+            rows={3}
             autocomplete="off"
             onChange={(e) => setq5(e.target.value)}
             placeholder="Set some goals for the week."
