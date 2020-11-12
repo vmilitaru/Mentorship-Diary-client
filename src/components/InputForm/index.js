@@ -26,17 +26,14 @@ function InputForm() {
 
   return (
     <>
-    <div className="page-intro"> 
-<Jumbotron>
-  <h1>Weekly Form</h1>
-  <br></br>
-  <p>
-    Intro to weekly form here
-  </p>
-  <p>
-  </p>
-</Jumbotron>
-</div>
+      <div className="page-intro">
+        <Jumbotron>
+          <h1>Weekly Form</h1>
+          <br></br>
+          <p>Intro to weekly form here</p>
+          <p></p>
+        </Jumbotron>
+      </div>
 
       <Form>
         <Form.Group controlId="week">
@@ -57,17 +54,19 @@ function InputForm() {
             onChange={(e) => setq1(e.target.value)}
             className="answer1"
             type="q1"
-            placeholder="Enter answer here..."
+            placeholder="Think about new subjects you have covered, how could you use them in the future? "
           />
         </Form.Group>
 
         <Form.Group controlId="formq2">
-          <Form.Label>How would you implement what you have learned day to day?</Form.Label>
+          <Form.Label>
+            How would you implement what you have learned day to day?
+          </Form.Label>
           <Form.Control
             autocomplete="off"
             onChange={(e) => setq2(e.target.value)}
             type="q2"
-            placeholder="Enter answer here..."
+            placeholder="What are the technical or personal applications?"
           />
         </Form.Group>
         <Form.Group controlId="formq3">
@@ -76,25 +75,27 @@ function InputForm() {
             autocomplete="off"
             onChange={(e) => setq3(e.target.value)}
             type="q3"
-            placeholder="Enter answer here..."
+            placeholder="How would you go about improving them and what is holding you back."
           />
         </Form.Group>
         <Form.Group controlId="formq4">
-          <Form.Label>Share an example of something that you struggled with?</Form.Label>
+          <Form.Label>
+            Share an example of something that you struggled with?
+          </Form.Label>
           <Form.Control
             autocomplete="off"
             onChange={(e) => setq4(e.target.value)}
             type="q4"
-            placeholder="Enter answer here..."
+            placeholder="Share a tricky piece of code or a problem that you would like some help with."
           />
         </Form.Group>
         <Form.Group controlId="formq5">
-          <Form.Label>What do I want to achieve next?</Form.Label>
+          <Form.Label>What do you want to achieve next?</Form.Label>
           <Form.Control
             autocomplete="off"
             onChange={(e) => setq5(e.target.value)}
             type="q5"
-            placeholder="Enter answer here..."
+            placeholder="Set some goals for the week."
           />
         </Form.Group>
         <Button onClick={handleClick} variant="primary" type="submit">
