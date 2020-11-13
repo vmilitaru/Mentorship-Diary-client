@@ -5,7 +5,7 @@ import {
   AiOutlineHistory,
   AiOutlineContacts,
 } from "react-icons/ai";
-import { RiLogoutBoxLine } from "react-icons/ri";
+
 
 export const SidebarData = [
   {

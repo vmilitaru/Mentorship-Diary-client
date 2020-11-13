@@ -6,7 +6,7 @@ import stars from '../images/starryNight.jpeg';
 function Contact() {
     return (
         <div className="page-intro">
-            <Jumbotron style = {{backgroundImage:`url(${stars})`,backgroundSize:"cover", backgroundPosition:"center"}} >
+            <Jumbotron style = {{backgroundImage:`url(${stars})`,backgroundSize:"cover", backgroundPosition:"center", borderRadius: "0"}} >
   <p style = {{color:"white", fontSize:"40px",fontWeight:"550"}}>Contact</p>
   <br></br>
   <p style ={{color:"white"}}>

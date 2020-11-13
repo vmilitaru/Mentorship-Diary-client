@@ -36,14 +36,6 @@ export default function Dashboard() {
           Log Out
         </Button>
       </div>
-      {/* <iframe
-        title="Google Calendar"
-        src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FLondon&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udWsjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=aHQzamxmYWFjNWxmZDYyNjN1bGZoNHRxbDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%2333B679&amp;color=%230B8043&amp;color=%23B39DDB&amp;showTabs=0&amp;showPrint=0&amp;showNav=1&amp;showTitle=0"
-        width="400"
-        height="300"
-        frameborder="0"
-        scrolling="no"
-      ></iframe> */}
     </>
   );
 }

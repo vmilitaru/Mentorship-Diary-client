@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { Form, Button, Jumbotron, Col } from "react-bootstrap";
+import { Form, Button, Jumbotron } from "react-bootstrap";
 import { auth } from "../../firebase/firebase";
 import stars from '../images/starryNight.jpeg';
 
@@ -48,24 +48,17 @@ function InputForm() {
   return (
     <>
       <div className="page-intro">
-        <Jumbotron style = {{backgroundImage:`url(${stars})`,backgroundSize:"cover", backgroundPosition:"center"}} >
+        <Jumbotron style = {{backgroundImage:`url(${stars})`,backgroundSize:"cover", backgroundPosition:"center", borderRadius: "0"}} >
           <h1  style={{color:"white"}}>Weekly Form</h1>
           <br></br>
-          <p  style={{color:"white", fontSize:"24px"}}>This tool will help you to structure your meetings and leave you with a diary documenting your conversations as well as your journey through the School Of Code.</p>
+          <p  style={{color:"white"}}>This tool will help you to structure your meetings and leave you with a diary documenting your conversations as well as your journey through the School Of Code.</p>
           <p></p>
         </Jumbotron>
       </div>
 
-      {/* <Form.Group controlId="formPlaintextEmail">
-        <Form.Label column sm="2">
-          id
-        </Form.Label>
-        <Col sm="10">
-          <Form.Control plaintext readOnly defaultValue={uuid} />
-        </Col>
-      </Form.Group> */}
 
       <Form onSubmit={handleSubmit}>
+
         <Form.Group controlId="week">
           <Form.Label style={{ fontSize: "22px", fontWeight: "bold" }}>
             Week Number
@@ -152,6 +145,8 @@ function InputForm() {
           Submit
         </Button>
       </Form>
+      <br></br>
+      <br></br>
     </>
   );
 }
