@@ -1,8 +1,9 @@
 body {
-  margin-bottom: 80px; 
+  margin-bottom: 80px;
 }
 
 .page-intro {
+  padding: 0;
   text-align: center;
   justify-content: center;
   align-items: center;

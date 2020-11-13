@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import stars from '../images/starryNight.jpeg';
+import stars from "../images/starryNight.jpeg";
 
 import { Accordion, Card, Button } from "react-bootstrap";
 import "../App/App.css";
@@ -75,7 +75,8 @@ function History({ week, uuid }) {
             <Card.Header>
               <Card.Header>
                 <Accordion.Toggle as={Button} variant="link" eventKey="5">
-                  Is there anything else you would like to cover in this session?
+                  Is there anything else you would like to talk about in this
+                  session?
                 </Accordion.Toggle>
               </Card.Header>
               <Accordion.Collapse eventKey="5">

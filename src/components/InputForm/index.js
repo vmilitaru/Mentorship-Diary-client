@@ -144,7 +144,7 @@ function InputForm() {
         <br></br>
         <Form.Group controlId="formq5">
           <Form.Label style={{ fontSize: "22px", fontWeight: "bold" }}>
-            Is there anything else you would like to cover in this session?
+            Is there anything else you would like to talk about in this session?
           </Form.Label>
           <Form.Control
             as="textarea"
@@ -152,7 +152,7 @@ function InputForm() {
             style={{ maxHeight: "100", overflowY: "scroll" }}
             autocomplete="off"
             onChange={(e) => setq5(e.target.value)}
-            placeholder="Enter your answer here..."
+            placeholder="Discuss anything that you'd like to work on.  Make plans for your next meeting."
           />
         </Form.Group>
         <br></br>

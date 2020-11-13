@@ -4,9 +4,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  
- 
-  
 }
 
 .menu-bars {
@@ -17,7 +14,7 @@
 
 .nav-menu {
   background-color: #060b26;
-  width: 250px;
+  width: 288px;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -75,4 +72,4 @@ span {
 }
 #root {
   margin: 0;
-} 
+}

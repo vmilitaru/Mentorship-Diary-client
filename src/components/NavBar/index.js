@@ -31,13 +31,19 @@ function Navbar() {
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
-    <div style={{width: "100vw",marginLeft:" calc(-50vw + 50%)"}}>
-      <IconContext.Provider value={{ color: "#fff" }} >
-        <div  className="navbar">
+    <div
+      style={{
+        width: "100vw",
+        marginLeft: " calc(-50vw + 50%)",
+      }}
+    >
+      <IconContext.Provider value={{ color: "#fff" }}>
+        <div className="navbar">
           <Link to="#" className="menu-bars">
             <FaBars onClick={showSidebar} />
           </Link>
-          <a style={{marginRight:"30px"}}
+          <a
+            style={{ marginRight: "30px" }}
             href="https://www.schoolofcode.co.uk/"
             title="School of Code Official Website"
             target="blank"
@@ -46,7 +52,6 @@ function Navbar() {
               src={socLogoPng}
               alt="School of Code Logo"
               style={{
-               
                 height: "100%",
                 width: "65px",
                 paddingBottom: "2%",
