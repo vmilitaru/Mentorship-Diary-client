@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Form, Button, Jumbotron } from "react-bootstrap";
 import { auth } from "../../firebase/firebase";
-import stars from '../images/starryNight.jpeg';
+import stars from "../images/starryNight.jpeg";
 
 const AuthContext = React.createContext();
 
@@ -27,10 +27,10 @@ function InputForm() {
     return unsubscribe;
   }, [uuid]);
 
-  function handleSubmit(e){
+  function handleSubmit(e) {
     e.preventDefault();
     e.target.reset();
-   }
+  }
 
   async function handleClick() {
     console.log("clicked");
@@ -48,17 +48,26 @@ function InputForm() {
   return (
     <>
       <div className="page-intro">
-        <Jumbotron style = {{backgroundImage:`url(${stars})`,backgroundSize:"cover", backgroundPosition:"center", borderRadius: "0"}} >
-          <h1  style={{color:"white"}}>Weekly Form</h1>
+        <Jumbotron
+          style={{
+            backgroundImage: `url(${stars})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            borderRadius: "0",
+          }}
+        >
+          <h1 style={{ color: "white" }}>Weekly Form</h1>
           <br></br>
-          <p  style={{color:"white"}}>This tool will help you to structure your meetings and leave you with a diary documenting your conversations as well as your journey through the School Of Code.</p>
+          <p style={{ color: "white" }}>
+            This tool will help you to structure your meetings and leave you
+            with a diary documenting your conversations as well as your journey
+            through the School Of Code.
+          </p>
           <p></p>
         </Jumbotron>
       </div>
 
-
       <Form onSubmit={handleSubmit}>
-
         <Form.Group controlId="week">
           <Form.Label style={{ fontSize: "22px", fontWeight: "bold" }}>
             Week Number
@@ -82,20 +91,23 @@ function InputForm() {
           <Form.Control
             as="textarea"
             rows={3}
+            style={{ maxHeight: "100", overflowY: "scroll" }}
             autocomplete="off"
             onChange={(e) => setq1(e.target.value)}
             className="answer1"
             placeholder="Think about new subjects you have covered, how could you use them in the future? "
           />
         </Form.Group>
-<br></br>
+        <br></br>
         <Form.Group controlId="formq2">
           <Form.Label style={{ fontSize: "22px", fontWeight: "bold" }}>
             How would you implement what you have learned day to day?
           </Form.Label>
           <Form.Control
             as="textarea"
+            style={{ maxHeight: "100", overflowY: "scroll" }}
             rows={3}
+            style={{ overflow: "100" }}
             autocomplete="off"
             onChange={(e) => setq2(e.target.value)}
             placeholder="What are the technical or personal applications?"
@@ -109,6 +121,7 @@ function InputForm() {
           <Form.Control
             as="textarea"
             rows={3}
+            style={{ maxHeight: "100", overflowY: "scroll" }}
             autocomplete="off"
             onChange={(e) => setq3(e.target.value)}
             placeholder="How would you go about improving them and what is holding you back."
@@ -122,6 +135,7 @@ function InputForm() {
           <Form.Control
             as="textarea"
             rows={3}
+            style={{ maxHeight: "100", overflowY: "scroll" }}
             autocomplete="off"
             onChange={(e) => setq4(e.target.value)}
             placeholder="Share a tricky piece of code or a problem that you would like some help with."
@@ -130,18 +144,24 @@ function InputForm() {
         <br></br>
         <Form.Group controlId="formq5">
           <Form.Label style={{ fontSize: "22px", fontWeight: "bold" }}>
-          Is there anything else you would like to cover in this session?
+            Is there anything else you would like to cover in this session?
           </Form.Label>
           <Form.Control
             as="textarea"
             rows={3}
+            style={{ maxHeight: "100", overflowY: "scroll" }}
             autocomplete="off"
             onChange={(e) => setq5(e.target.value)}
             placeholder="Enter your answer here..."
           />
         </Form.Group>
         <br></br>
-        <Button style = {{backgroundColor:"black",border:"none"}} onClick={handleClick} variant="primary" type="submit">
+        <Button
+          style={{ backgroundColor: "black", border: "none" }}
+          onClick={handleClick}
+          variant="primary"
+          type="submit"
+        >
           Submit
         </Button>
       </Form>
