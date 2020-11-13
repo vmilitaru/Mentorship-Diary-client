@@ -3,6 +3,7 @@ import { Table } from "react-bootstrap";
 import { FiTwitter, FiFacebook, FiYoutube, FiLinkedin } from "react-icons/fi";
 import { AiOutlineMedium } from "react-icons/ai";
 import { SiGooglemaps } from "react-icons/si";
+import "../App/App.css";
 
 export default function Footer() {
   return (
