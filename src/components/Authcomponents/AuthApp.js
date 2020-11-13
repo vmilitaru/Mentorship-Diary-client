@@ -11,6 +11,7 @@ import UpdateProfile from "./UpdateProfile";
 
 function AuthApp() {
   return (
+    
     <Container
     // className="d-flex align-items-center justify-content-center"
     // style={{ minHeight: "100vh" }}
@@ -21,6 +22,9 @@ function AuthApp() {
           <AuthProvider>
             <Switch>
               <PrivateRoute exact path="/" component={App} />
+              <PrivateRoute exact path="/form" component={App} />
+              <PrivateRoute exact path="/history" component={App} />
+              <PrivateRoute exact path="/contact" component={App} /> 
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
@@ -30,6 +34,7 @@ function AuthApp() {
         </Router>
       </div>
     </Container>
+  
   );
 }
 

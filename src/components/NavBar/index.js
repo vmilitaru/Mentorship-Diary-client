@@ -31,17 +31,28 @@ function Navbar() {
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
-    <div>
-      <IconContext.Provider value={{ color: "#fff" }}>
-        <div className="navbar">
+    <div style={{width: "100vw",marginLeft:" calc(-50vw + 50%)"}}>
+      <IconContext.Provider value={{ color: "#fff" }} >
+        <div  className="navbar">
           <Link to="#" className="menu-bars">
             <FaBars onClick={showSidebar} />
           </Link>
-          <img
-            src={socLogoPng}
-            alt="School of Code Logo"
-            style={{ height: "50px", display: "right" }}
-          ></img>
+          <a style={{marginRight:"30px"}}
+            href="https://www.schoolofcode.co.uk/"
+            title="School of Code Official Website"
+            target="blank"
+          >
+            <img
+              src={socLogoPng}
+              alt="School of Code Logo"
+              style={{
+               
+                height: "100%",
+                width: "65px",
+                paddingBottom: "2%",
+              }}
+            ></img>
+          </a>
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>
@@ -60,9 +71,14 @@ function Navbar() {
                 </li>
               );
             })}
-            <RiLogoutBoxLine style={{marginLeft: "31"}}/><Button className="nav-text" onClick={handleLogout} style={{backgroundColor:"#060b26", border: "none"}} >
+            <RiLogoutBoxLine style={{ marginLeft: "31" }} />
+            <Button
+              className="nav-text"
+              onClick={handleLogout}
+              style={{ backgroundColor: "#060b26", border: "none" }}
+            >
               Log Out
-              </Button>
+            </Button>
           </ul>
         </nav>
       </IconContext.Provider>
