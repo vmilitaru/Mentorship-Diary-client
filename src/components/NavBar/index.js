@@ -25,6 +25,7 @@ function Navbar() {
       history.push("/login");
     } catch {
       setError("Failed to log out");
+      console.log(error);
     }
   }
 
