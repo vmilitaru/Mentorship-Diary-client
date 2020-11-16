@@ -5,7 +5,7 @@ import InputForm from "../InputForm/index";
 import Login from "../Authcomponents/Login";
 import DropDown from "../../components/History/DropDown";
 import Footer from "../../components/Footer";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "../HomePage";
 import Contact from "../Contact";
 

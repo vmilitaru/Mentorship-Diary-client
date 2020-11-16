@@ -2,7 +2,6 @@ import React from "react";
 import { Jumbotron } from "react-bootstrap";
 import "../App/App.css";
 import stars from "../images/starryNight.jpeg";
-import logo from "../images/2.png";
 
 function HomePage() {
   return (

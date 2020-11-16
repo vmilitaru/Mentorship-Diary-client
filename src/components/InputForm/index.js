@@ -105,9 +105,8 @@ function InputForm() {
           </Form.Label>
           <Form.Control
             as="textarea"
-            style={{ maxHeight: "100", overflowY: "scroll" }}
+            style={{ maxHeight: "100", overflowY: "scroll", overflow: "100" }}
             rows={3}
-            style={{ overflow: "100" }}
             autocomplete="off"
             onChange={(e) => setq2(e.target.value)}
             placeholder="What are the technical or personal applications?"

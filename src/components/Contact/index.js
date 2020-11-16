@@ -2,11 +2,6 @@ import React from "react";
 import { Jumbotron, Table, Card } from "react-bootstrap";
 import "../App/App.css";
 import stars from "../images/starryNight.jpeg";
-import { FiTwitter, FiFacebook, FiYoutube, FiLinkedin } from "react-icons/fi";
-import { AiOutlineMedium } from "react-icons/ai";
-import { SiGooglemaps } from "react-icons/si";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
 function Contact() {
   return (
     <div className="page-intro">

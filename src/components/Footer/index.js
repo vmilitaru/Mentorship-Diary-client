@@ -1,5 +1,5 @@
 import React from "react";
-import { Table, Card } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import { FiTwitter, FiFacebook, FiYoutube, FiLinkedin } from "react-icons/fi";
 import { AiOutlineMedium } from "react-icons/ai";
 import { SiGooglemaps } from "react-icons/si";
