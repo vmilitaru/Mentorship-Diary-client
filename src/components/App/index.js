@@ -36,7 +36,13 @@ function App() {
             </Route>
           </Switch>
         </div>
-        <Footer />
+        <br />
+        <br />
+        <br />
+        <footer>
+          {" "}
+          <Footer />
+        </footer>
       </Router>
     </div>
   );
