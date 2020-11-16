@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { Form, Button, Jumbotron } from "react-bootstrap";
 import { auth } from "../../firebase/firebase";
 import stars from "../images/starryNight.jpeg";
-
+let url = process.env.REACT_APP_BACKEND_URL || "http://localhost:3000";
 const AuthContext = React.createContext();
 
 export function useAuth() {
@@ -40,7 +40,7 @@ function InputForm() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ data: { uuid, week, q1, q2, q3, q4, q5 } }),
     };
-    const response = await fetch(`http://localhost:3000`, requestOptions);
+    const response = await fetch(`${url}`, requestOptions);
     const data = await response.json();
     setq1({ q1: data.q1 });
   }

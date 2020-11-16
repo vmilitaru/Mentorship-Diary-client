@@ -9,7 +9,7 @@ function History({ week, uuid }) {
 
   useEffect(() => {
     async function getDiary() {
-      const res = await fetch(url);
+      const res = await fetch(`${url}`);
       const data = await res.json();
       console.log(data);
       setDiary(data.payload);
