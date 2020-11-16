@@ -4,7 +4,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { SidebarData } from "../SideBarData";
 import "./NavBar.css";
 import { IconContext } from "react-icons";
-import Link from "react-router-dom";
+import { Link } from "react-router-dom";
 import socLogoPng from "../images/soc-logo.png";
 import { useAuth } from "../../contexts/AuthContext";
 import { useHistory } from "react-router-dom";
