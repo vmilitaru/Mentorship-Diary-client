@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { Form, Button, Jumbotron } from "react-bootstrap";
 import { auth } from "../../firebase/firebase";
 import stars from "../images/starryNight.jpeg";
-let url = process.env.REACT_APP_BACKEND_URL || "http://localhost:3000";
+let url = process.env.REACT_APP_SERVER_URL || "http://localhost:5000";
 const AuthContext = React.createContext();
 
 export function useAuth() {

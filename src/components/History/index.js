@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { Accordion, Card, Button } from "react-bootstrap";
 import "../App/App.css";
-let url = process.env.REACT_APP_BACKEND_URL || "http://localhost:3000";
+let url = process.env.REACT_APP_SERVER_URL || "http://localhost:5000";
 function History({ week, uuid }) {
   const [diary, setDiary] = useState([]);
 
