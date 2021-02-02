@@ -18,7 +18,7 @@ We also added in a **Contact** page with School of Code contacts.
 
 ![mentorship-diary-contact](https://user-images.githubusercontent.com/70764326/106598206-5488b800-654f-11eb-8448-6a128e75d20d.png)
 
-The **Authentication** was done by using [Firebase](https://firebase.google.com/)
+The **Authentication** was done using [Firebase](https://firebase.google.com/) .
 
 ![mentorship-diary-authentication](https://user-images.githubusercontent.com/70764326/106597795-d0cecb80-654e-11eb-9002-1daae449b413.png)
 
