@@ -16,7 +16,7 @@ function HomePage() {
               borderRadius: "0",
             }}
           >
-            <h1 style={{ color: "white" }}>Mentor Diary</h1>
+            <h1 style={{ color: "white" }}>Mentorship Diary</h1>
           </Jumbotron>
         </div>
         <div>
