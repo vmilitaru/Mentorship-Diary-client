@@ -23,13 +23,18 @@ The **Authentication** was done using [Firebase](https://firebase.google.com/) .
 ![mentorship-diary-authentication](https://user-images.githubusercontent.com/70764326/106597795-d0cecb80-654e-11eb-9002-1daae449b413.png)
 
 
-The server code you can find it [here](https://github.com/vmilitaru/Mentorship-Diary-server).
+If you want to see the backend code of this application head to this [repository](https://github.com/vmilitaru/Mentorship-Diary-server).
+
+## Live Project
+
+Here is the [deployed version](https://mentorship-diary.netlify.app/).
 
 ## Stack
 
 - [React](https://reactjs.org/)
 - [Firebase](https://firebase.google.com/)
 - [React Bootstrap](https://react-bootstrap.github.io/)
+- [Netlify](https://www.netlify.com/)
 
 ## Getting started
 
@@ -37,14 +42,24 @@ The server code you can find it [here](https://github.com/vmilitaru/Mentorship-D
 
 2. Download the required npm modules: `npm i`
 
-## Configuration
+## Configuring Firebase 
 
-Set up Firebase:
 
-- Create a project at the [Firebase console](https://console.firebase.google.com/).
-- Copy the contents of `.env.example` into a new file called `.env.local`
-- Get your authentication credentials from the Firebase console under _Project settings > General> Your apps_ Add a new web app if you don't already have one. Under _Firebase SDK snippet_ choose _Config_ to get the configuration as JSON. It will include keys like `apiKey`, `authDomain`, `projectId`, `storageBucket`, `messagingSenderId`, `appId`. Set the appropriate environment variables in the `.env.local` file at the root of this project.
-- Go to **Build**, click on **Authentication** and in the **Sign-in method** tab enable **Email/Password** authentication method of the app.
+3. Create a project at the [Firebase console](https://console.firebase.google.com/).
+
+4. Get your authentication credentials from the Firebase console under _Project settings > General> Your apps_ Add a new web app if you don't have one already. 
+
+6. Go to **Build**, click on **Authentication** and in the **Sign-in method** tab enable **Email/Password** authentication method of the app.
+
+### Set up environment variables
+
+To connect the app with Firebase, you'll need to add the settings from your Firebase application as environment variables.
+
+4. Copy the content of `.env.example` into a new file called `.env.local`.
+
+5. Set the appropriate environment variables in the `.env.local` file at the root of this project:
+
+  - `REACT_APP_FIREBASE_API_KEY`,  `REACT_APP_FIREBASE_AUTH_DOMAIN`, `REACT_APP_FIREBASE_PROJECT_ID`, `REACT_APP_FIREBASE_STORAGE_BUCKET`, `REACT_APP_FIREBASE_MESSAGING_SENDER_ID`, `REACT_APP_FIREBASE_APP_ID` - in the Firebase console under _Your Project>Project settings > General> Your apps>Firebase SDK snippet_ choose _Config_ to get the configuration as JSON .
 
 ## Available Scripts
 
@@ -57,6 +72,52 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+# Deploy on Netlify
+
+You can deploy this app to the cloud with [Netlify](https://www.netlify.com/) ([Documentation](https://docs.netlify.com/site-deploys/create-deploys/)).
+
+### Deploy Your Local Project 
+
+To deploy your local project to Netlify, push it to GitHub/GitLab/Bitbucket
+
+- If you haven't done this already go to [netlify](https://app.netlify.com/signup) and sign up for a free account. 
+
+- Once you are loged in to your account you will be redirected to your _Dashboard_.
+
+- Here you have the option to create a new site by clicking _New site from Git_ button.
+
+- The Git provider that we are going to use for now is GitHub so before selecting this option make sure you've pushed up the latest code that you want to deploy.
+
+- Select the GitHub account where your repository is and search the repo you want to connect with.
+
+- Click on the repository returned by the search.
+
+- Chose the branch that you want to deploy.
+
+- Check that the build commmand matches the one from the package.json file of the project.
+
+**Important**:  Before clicking the _Deploy site_ button we need to connect the app with our server and specify our **Environment Variables** in the deployed application. 
+
+- Go to _Show advanced_ option and click _New variable_ setting, here you will be able to insert all your **Environment Variables** from your `.env.local` file. 👉 [how to name your environment variables in a React App](https://create-react-app.dev/docs/adding-custom-environment-variables/)
+
+- Click the _Deploy site_ option.
+
+- If you go to the _Deploy_ tab and after click _Building_ you will be able to see the deployment progress and when the site goes live.
+
+- Once the site is live you can _Preview_ your deployed app, but probably by now  you've seen the error message from Firebase with _unauthorized domain_ and to fix this issue there is one more step to do.
+
+- Go to Firebase console and under _Your Project> Authentication> Sign-in-method> Authorised domains_  add the site domain from Netlify.
 
 
 
