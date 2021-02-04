@@ -59,7 +59,7 @@ To connect the app with Firebase, you'll need to add the settings from your Fire
 
 7. Set the appropriate environment variables in the `.env.local` file at the root of this project:
 
-  - `REACT_APP_FIREBASE_API_KEY`,  `REACT_APP_FIREBASE_AUTH_DOMAIN`, `REACT_APP_FIREBASE_PROJECT_ID`, `REACT_APP_FIREBASE_STORAGE_BUCKET`, `REACT_APP_FIREBASE_MESSAGING_SENDER_ID`, `REACT_APP_FIREBASE_APP_ID` - Can be found in the Firebase console under _Your Project>Project settings > General> Your apps>Firebase SDK snippet_ choose _Config_ to get the configuration as JSON .
+    - `REACT_APP_FIREBASE_API_KEY`,  `REACT_APP_FIREBASE_AUTH_DOMAIN`, `REACT_APP_FIREBASE_PROJECT_ID`, `REACT_APP_FIREBASE_STORAGE_BUCKET`, `REACT_APP_FIREBASE_MESSAGING_SENDER_ID`, `REACT_APP_FIREBASE_APP_ID` - Can be found in the Firebase console under _Your Project>Project settings > General> Your apps>Firebase SDK snippet_ choose _Config_ to get the configuration as JSON .
 
 ## Available Scripts
 
