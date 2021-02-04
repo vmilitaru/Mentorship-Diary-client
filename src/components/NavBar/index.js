@@ -44,7 +44,6 @@ function Navbar() {
             <FaBars onClick={showSidebar} />
           </Link>
           <a
-           // style={{ display: "flex", justifyContent: "right" }}
             href="https://www.schoolofcode.co.uk/"
             title="School of Code Official Website"
             target="blank"
