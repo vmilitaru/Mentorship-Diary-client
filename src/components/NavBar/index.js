@@ -53,6 +53,8 @@ function Navbar() {
               src={socLogoPng}
               alt="School of Code Logo"
               style={{
+                display: "flex",
+                justifyContent: "right",
                 height: "100%",
                 width: "65px",
                 paddingBottom: "2%",
